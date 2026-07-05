@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,5 +22,20 @@
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+
+
+
+
+
+
+
+
+  "comments":{
+    "package.json": "this file is like an Identity Card of project",
+    "scripts": "shortcuts of npm commands",
+    "dependencies": "the libraries your project needs to run in the browser",
+    "devDependencies": "tools help you to build your project"
   }
+
 }
