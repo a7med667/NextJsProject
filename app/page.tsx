@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Button, Input} from "./components/tools";
-
+import Inputs from "./components/UseState/page";
 
 
 
@@ -26,6 +26,9 @@ function Home() {
               />
             </div>
           </div>
+
+          <Inputs/>
+
         </main>
       </div>
       <Footer/>

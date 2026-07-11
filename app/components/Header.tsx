@@ -15,7 +15,9 @@ function Header() {
           <Link href="#" className="hover:text-white">Contact Us</Link>
       </nav>
       <div>
-        <Button text="Add an invoice"/>
+        <Button 
+          classname="hidden"
+          text="Add an invoice"/>
       </div>
       
       <div className="sm:hidden">
