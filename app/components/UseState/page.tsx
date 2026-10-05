@@ -9,7 +9,7 @@ function Inputs(){
     const [InputValue1 , Text1]= useState("");                  // method of using the hook usestate 
     const [InputValue2 , Text2]= useState("");
     const [counter, setCounter] =useState<number>(0); 
-    const [list, setList] = useState<string[]>(["ahmed","ali","mazin","maeen","assem"]);
+    const [list, setList] = useState<string[]>(["ahmed","ali","mazin"]);
     const [hasError, setHasError] = useState<boolean>(false);
 
     return(

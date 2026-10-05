@@ -1,6 +1,6 @@
 "use client"; // ضرورية لاستخدام الـ useState في Next.js
 
-import { useState } from "react";
+import { Children, useState } from "react";
 
 type InputProps = {
   value?:string | number;
@@ -9,28 +9,17 @@ type InputProps = {
 };
 
 type ButtonProps = {
-  text: string;
+  text?: string;
   classname?: string;
   onClick?:() => void;
+  children?:React.ReactNode;
 };
 
-export function Button({ text , classname , onClick} : ButtonProps) {
+export function Button({ text , classname , onClick , children} : ButtonProps) {
   return (
-    <button className={
-      `sm:flex w-full 
-      items-center 
-      justify-center 
-      bg-white 
-      text-black 
-      px-3 
-      py-1.5 
-      hover:bg-gray-200 
-      rounded 
-      ${classname}`
-      }
-      onClick={onClick}
-      >
-      {text}
+    <button className={`sm:flex items-center justify-center bg-sky-50 text-gray-400 px-3 py-1.5 hover:bg-sky-100 active:bg-sky-50 cursor-pointer rounded ${classname}`}
+      onClick={onClick}>
+      {text || children}
     </button>
   );
 }
@@ -40,7 +29,7 @@ export function Input({value,placeholder,onChange}:InputProps) {
     <div className="flex flex-col gap-4">        
       <input 
         type="text" 
-        className="px-5 h-8 rounded border-0 border-b bg-gray-800 focus:outline-none" 
+        className="px-5 h-8 rounded focus:outline-none" 
         value={value}
         onChange={onChange} 
         placeholder={placeholder}
